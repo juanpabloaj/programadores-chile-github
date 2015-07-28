@@ -1,0 +1,9 @@
+{
+  "firebase": "programadores-chile",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
