@@ -1,13 +1,114 @@
-body {
-  padding-top: 70px;
-  padding-bottom: 40px;
-}
-
 .user-box {
     padding:10px;
     margin:10px 0;
     border:1px solid #eee;
     height: 52px;
+    width: 150px;
     border-left-width:5px;
     border-radius:3px
+}
+
+
+#gitVid {
+  height: 100%;
+  min-height: 950px !important;
+  overflow: hidden;
+    position: relative;
+
+}
+
+#videoBG {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  min-height: 840px !important;
+  bottom: 0px;
+  top: 0px;
+  position: absolute;
+}
+
+video {
+  margin: auto;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  visibility: visible;
+  width: 1682px;
+  height: auto;
+}
+
+.video {
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  overflow: hidden;
+  -webkit-background-size: cover;
+  background-image: none;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+#gitVid #videoBG .shade {
+  background: #EC1A1A;
+  background-image: -moz-linear-gradient(144deg, #1cbbb4 0%, #24afaa 0%, #0072bc 100%);
+  background-image: -webkit-linear-gradient(144deg, #69C3C3 0%, rgba(223, 80, 28, 0.77) 0%, rgba(204, 170, 240, 1) 100%);
+  background-image: -ms-linear-gradient(144deg, #1cbbb4 0%, #24afaa 0%, #0072bc 100%);
+  opacity: 0.9;
+  height: 100%;
+}
+
+.gitContent
+{
+
+	height: 100%;
+  width: 100%;
+  position: absolute;
+  min-height: 840px !important;
+  bottom: 0px;
+  top: 0px;
+}
+
+
+.btn-transparent
+{
+  color: #FFF;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: #FFF;
+  margin-bottom: 20px;
+
+}
+.btn-transparent:hover {
+  color: #FFF;
+  background-color: rgba(255, 255, 255, 0.27);
+  border-color: #FFF;
+}
+
+.btn-transparent:focus {
+  color: #FFF;
+  background-color: rgba(255, 255, 255, 0.47);
+  border-color: #FFF;
+}
+
+.header{
+margin-top: 20px;
+}
+
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: rgba(255, 255, 255, 0.33);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: border .2s ease-in-out;
+  -o-transition: border .2s ease-in-out;
+  transition: border .2s ease-in-out;
 }
