@@ -17,18 +17,21 @@
         <div class="row">
           <div class="pull-right">
             <div ng-show="authData">
-              <button class="btn btn-default" ng-click="auth.$unauth()">{{ username }} Logout</button>
-            </div>
-            <div ng-hide="authData">
-              <button class="btn btn-default" ng-click="auth.$authWithOAuthPopup('github')">Login with github</button>
+              <button class="btn btn-danger" ng-click="auth.$unauth()">{{ username }} Logout</button>
             </div>
           </div>
+          <center>
+          <div ng-hide="authData">
+              <button class="btn-lg btn-info" style="margin:10px;" ng-click="auth.$authWithOAuthPopup('github')">Login with github</button>
+          </div>
+          </center>
         </div>
         <hr>
 
         <div class="user-box" ng-repeat="user in users">
           <div class="">
-              <a href="https://github.com/{{user.username}}">https://github.com/{{user.username}}</a>
+
+             <h3> <a href="https://github.com/{{user.username}}">https://github.com/{{user.username}}</a></h3>
           </div>
         </div>
 
