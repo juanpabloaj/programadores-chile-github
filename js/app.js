@@ -20,8 +20,11 @@ app
       if (authData) {
         var username = authData.github.username;
         var displayName = authData.github.displayName || '';
+        var profileImageURL = profileImageURL;
         $scope.username = username;
         $scope.displayName = displayName;
+        $scope.profileImageURL = profileImageURL;
+
 
         refUsers.child(username).once('value', function(data){
           // if user not exist create
