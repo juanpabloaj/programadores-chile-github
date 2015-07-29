@@ -22,7 +22,7 @@ app
         var displayName = authData.github.displayName || '';
         var profileImageURL = profileImageURL;
         $scope.username = username;
-        $scope.displayName = displayName;
+        $scope.displayName = displayName || username;
         $scope.profileImageURL = profileImageURL;
 
 

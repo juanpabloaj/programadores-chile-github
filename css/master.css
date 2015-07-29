@@ -8,6 +8,10 @@
     border-radius:3px
 }
 
+.user-name a, .user-name {
+    color:#F5F5F5;
+}
+
 
 #gitVid {
   height: 100%;

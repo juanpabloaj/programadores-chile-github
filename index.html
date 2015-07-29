@@ -49,14 +49,12 @@
 
                   <div class="row" >
                     <div ng-repeat="user in users">
-                      
+
   <div class="col-sm-4 col-md-2">
     <div class="thumbnail">
       <img ng-src="{{user.profileImageURL}}"></img>
-      <div class="caption">
-        <h3>{{user.username}}</h3>
-        <p></p>
-        
+      <div class="caption user-name">
+        <h4><a href="https://github.com/{{user.username}}/">{{user.username}}</a></h4>
       </div>
     </div>
   </div>
@@ -72,6 +70,6 @@
           </div>
         </div>
       </div>
-    </div> 
+    </div>
   </body>
   </html>
