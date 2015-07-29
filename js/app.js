@@ -19,7 +19,7 @@ app
       $scope.authData = authData;
       if (authData) {
         var username = authData.github.username;
-        var displayName = authData.github.displayName;
+        var displayName = authData.github.displayName || '';
         $scope.username = username;
         $scope.displayName = displayName;
 
