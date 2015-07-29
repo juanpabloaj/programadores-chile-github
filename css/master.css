@@ -10,10 +10,15 @@
 
 
 #gitVid {
-  height: 100%;
-  min-height: 950px !important;
-  overflow: hidden;
-    position: relative;
+ position: fixed
+  bottom: 0
+  right: 0
+  height: auto
+  width: auto
+  min-height: 100%
+  min-width: 100%
+  z-index: -9999
+
 
 }
 
@@ -24,7 +29,7 @@
   min-height: 840px !important;
   bottom: 0px;
   top: 0px;
-  position: absolute;
+  position: fixed;
 }
 
 video {
@@ -73,6 +78,7 @@ video {
   min-height: 840px !important;
   bottom: 0px;
   top: 0px;
+
 }
 
 
@@ -98,6 +104,9 @@ video {
 
 .header{
 margin-top: 20px;
+ 
+  
+
 }
 
 .thumbnail {
@@ -111,4 +120,17 @@ margin-top: 20px;
   -webkit-transition: border .2s ease-in-out;
   -o-transition: border .2s ease-in-out;
   transition: border .2s ease-in-out;
+}
+
+ a{
+  color: #B73333;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+
+.thumbnail .caption {
+  padding: 7px;
+  color: #FFF;
+  font-weight: 800;
 }
