@@ -1,0 +1,61 @@
+/* ----------- Iphone 4/ 4s ----------- */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px)
+{
+	video {
+		width: 2764px !important; 
+	}
+	.btn{
+		  font-size: 20px;
+	}
+
+	button.btn.btn-transparent {
+
+		 height: 49px;
+	}
+}
+
+/* ----------- Iphone 5/ 5S ----------- */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2) 
+{
+	video{
+		width: 3124px !important; 
+	}
+}
+/* ----------- iPad mini ----------- */
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) 
+and (-webkit-min-device-pixel-ratio: 1) 
+{
+	h3{
+		font-size: 15px;
+	}
+	p{
+		font-size: 10px;	
+	}
+	.thumbnail {
+		height: 100px;
+	}
+}
+
+/* ----------- iPad 1 and 2 ----------- */
+
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) 
+and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* ----------- iPad 3 and 4 ----------- */
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) 
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
