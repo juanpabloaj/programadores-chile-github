@@ -10,14 +10,14 @@
 
 
 #gitVid {
- position: fixed
-  bottom: 0
-  right: 0
-  height: auto
-  width: auto
-  min-height: 100%
-  min-width: 100%
-  z-index: -9999
+
+  bottom: 0;
+  right: 0;
+  height: auto;
+  width: auto;
+  min-height: 100%;
+  min-width: 100%;
+  z-index: -9999;
 
 
 }
@@ -25,7 +25,6 @@
 #videoBG {
   height: 100%;
   width: 100%;
-  position: absolute;
   min-height: 840px !important;
   bottom: 0px;
   top: 0px;
@@ -41,7 +40,7 @@ video {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   visibility: visible;
-  width: 1682px;
+  width: 1764px;
   height: auto;
 }
 
@@ -75,7 +74,7 @@ video {
 	height: 100%;
   width: 100%;
   position: absolute;
-  min-height: 840px !important;
+  min-height: 880px !important;
   bottom: 0px;
   top: 0px;
 
@@ -104,8 +103,6 @@ video {
 
 .header{
 margin-top: 20px;
- 
-  
 
 }
 
@@ -128,9 +125,28 @@ margin-top: 20px;
   text-decoration: none;
 }
 
+a:hover{
+  color: #B73333;
+  font-weight: 800;
+  text-decoration: none;
+   transform: sc;
+}
 
 .thumbnail .caption {
   padding: 7px;
   color: #FFF;
   font-weight: 800;
+}
+/********* MultiColor KeyFrame  **************/
+
+
+
+
+@-webkit-keyframes pulse  
+{
+  0% {background-color: #45CEEF;} 
+  12% {background-color: #FFF5A5;}
+  50% {background-color: #FFD4DA;}
+  75% {background-color: #99D2E4;}
+  100% {background-color: #D8CAB4;}
 }
