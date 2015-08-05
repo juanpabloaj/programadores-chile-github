@@ -37,7 +37,7 @@
               <div class="content" ng-controller="UsersController">
                 <div class="row">
                   <div ng-show="authData">
-                    <button class="btn btn-transparent shake animated" ng-click="auth.$unauth()">{{ username }} Logout <i class="fa fa-github"></i></button>
+                    <button class="btn btn-transparent animated" ng-click="auth.$unauth()">{{ username }} Logout <i class="fa fa-github"></i></button>
                   </div>
                   <div ng-hide="authData">
                     <button class="btn btn-transparent shake animated" ng-click="auth.$authWithOAuthPopup('github')">Login with github <i class="fa fa-github"></i></button>
