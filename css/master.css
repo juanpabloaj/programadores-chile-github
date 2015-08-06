@@ -1,14 +1,8 @@
 .user-box {
-    padding:10px;
-    margin:10px 0;
-    border:1px solid #eee;
-    height: 52px;
-    width: 150px;
-    border-left-width:5px;
-    border-radius:3px
+    height: 84px;
 }
 
-.user-name a, .user-name {
+.user-name a, .user-name, .user-name div {
     color:#F5F5F5;
 }
 
@@ -124,9 +118,9 @@ margin-top: 20px;
 
 
 
-@-webkit-keyframes pulse  
+@-webkit-keyframes pulse
 {
-  0% {background-color: #45CEEF;} 
+  0% {background-color: #45CEEF;}
   12% {background-color: #FFF5A5;}
   50% {background-color: #FFD4DA;}
   75% {background-color: #99D2E4;}

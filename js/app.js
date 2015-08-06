@@ -10,7 +10,31 @@ app
   .factory('Auth', ['$firebaseAuth', function($firebaseAuth){
     return($firebaseAuth(ref));
   }])
-  .controller('UsersController', function($scope, Auth, $firebaseArray){
+  .factory('Github', function($http, $q){
+
+    var service = {
+      repos: [],
+      languages: [],
+      getRepos: getRepos
+    };
+    return service;
+
+    function getRepos(username){
+      var def = $q.defer();
+      var url = 'https://api.github.com/users/' + username + '/repos';
+
+      $http.get(url)
+        .success(function(data){
+          service.repos = data;
+          def.resolve(data);
+        })
+        .error(function(){
+          def.reject("Failed to get repos");
+        });
+      return def.promise;
+    }
+  })
+  .controller('UsersController', function($scope, Auth, Github, $firebaseArray){
     $scope.users = $firebaseArray(refUsers);
 
     $scope.auth = Auth;
@@ -37,5 +61,14 @@ app
         })
       }
     });
+
+    $scope.getGithubInfo = function(username){
+      Github.getRepos(username)
+        .then(function(repos){
+          refUsers.child(username).update({
+            repos:repos.length
+          });
+        });
+    };
 
   });

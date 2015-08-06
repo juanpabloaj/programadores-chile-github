@@ -37,6 +37,7 @@
               <div class="content" ng-controller="UsersController">
                 <div class="row">
                   <div ng-show="authData">
+                    <button class="btn btn-transparent" ng-click="getGithubInfo(username)"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Sincronizar informaci&oacute;n</button>
                     <button class="btn btn-transparent animated" ng-click="auth.$unauth()">{{ username }} Logout <i class="fa fa-github"></i></button>
                   </div>
                   <div ng-hide="authData">
@@ -47,10 +48,13 @@
                 <div class="row">
                   <div ng-repeat="user in users">
                     <div class="col-sm-4 col-md-2 col-xs-6">
-                      <div class="thumbnail">
+                      <div class="user-box thumbnail">
                         <img ng-src="{{user.profileImageURL}}"></img>
                         <div class="caption user-name">
                           <h4><a href="https://github.com/{{user.username}}/">{{user.username}}</a></h4>
+                          <div class="" ng-show="user.repos">
+                            Repos: {{ user.repos }}
+                          </div>
                         </div>
                       </div>
                     </div>
