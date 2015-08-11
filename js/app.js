@@ -77,9 +77,13 @@ app
             refUsers.child(username).set({
               displayName: displayName,
               username:username
+            }, function(err){
+              if(!err){
+                $scope.getGithubInfo(username);
+              }
             });
           }
-        })
+        });
       }
     });
 
