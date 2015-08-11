@@ -15,7 +15,8 @@ app
     var service = {
       repos: [],
       languages: [],
-      getRepos: getRepos
+      getRepos: getRepos,
+      getLanguages: getLanguages
     };
     return service;
 
@@ -31,6 +32,26 @@ app
         .error(function(){
           def.reject("Failed to get repos");
         });
+      return def.promise;
+    }
+
+    function getLanguages(username) {
+      var def = $q.defer();
+      var languages = [];
+
+      getRepos(username).then(function(repos){
+        angular.forEach(repos, function(repo){
+          if (!repo.fork){
+            var language = repo.language;
+            if (language && languages.indexOf(language) === -1) {
+              this.push(language);
+            }
+          }
+        }, languages);
+
+        def.resolve(languages);
+      });
+
       return def.promise;
     }
   })
@@ -67,6 +88,13 @@ app
         .then(function(repos){
           refUsers.child(username).update({
             repos:repos.length
+          });
+        });
+
+      Github.getLanguages(username)
+        .then(function(languages){
+          refUsers.child(username).update({
+            languages:languages
           });
         });
     };
